@@ -1,62 +1,89 @@
-Proyecto Final: Análisis de Patrones Climáticos en Ciudades
-Este repositorio contiene mi proyecto final para el curso de "Fundamentos de Python para el Análisis de Datos". En este análisis se explora cómo varían las condiciones climáticas entre diferentes ciudades utilizando un dataset histórico.
+# 🌤️ Proyecto Final: Análisis de Patrones Climáticos en Ciudades
 
+**Curso:** Fundamentos de Python para el Análisis de Datos  
+**Autor:** Mizraim Moroyoqui Cárdenas  
+**Fecha:** Diciembre 2025
 
-1. Pregunta de Investigación:
+---
 
-¿Cómo varía la temperatura promedio entre las distintas ciudades y existe una relación directa entre el calor y la humedad?
+## ❓ Pregunta de Investigación
 
-El objetivo es identificar si la ubicación geográfica determina rangos de temperatura diferentes y cómo se comportan otras variables como la lluvia y la humedad en relación con el calor.
+> **¿Cómo varía la temperatura promedio entre las distintas ciudades y existe una relación directa entre el calor y la humedad?**
 
+El objetivo es identificar si la ubicación geográfica determina rangos de temperatura diferentes y cómo se comportan variables como lluvia y humedad respecto al calor.
 
-2. Preparación de Datos:
+---
 
-Para este análisis se utilizaron las siguientes librerías de Python:
+## 📦 Preparación de Datos
 
-Pandas: Para la carga y manipulación del dataset clima_ciudades.csv.
-Matplotlib & Seaborn: Para la creación de gráficos.
+**Librerías utilizadas:**
 
-El dataset contiene información diaria sobre temperaturas (máxima, mínima, promedio), humedad, precipitación y velocidad del viento para varias ciudades.
+- `pandas` → Carga y manipulación del dataset `clima_ciudades.csv`
+- `matplotlib`, `seaborn` → Visualización de datos
 
+**Descripción del dataset:**
 
-3. Limpieza de Datos:
+| Columna         | Descripción                                           |
+|-----------------|------------------------------------------------------|
+| fecha           | Fecha en formato año-mes-día                         |
+| ciudad          | Nombre de la ciudad                                  |
+| temp_max        | Temperatura máxima diaria                            |
+| temp_min        | Temperatura mínima diaria                            |
+| temp_promedio   | Temperatura promedio diaria                          |
+| humedad         | Humedad (%)                                          |
+| precipitación   | Precipitación (mm)                                   |
+| viento          | Velocidad del viento (km/h)                          |
 
-Antes de analizar, se realizaron los siguientes pasos de limpieza para asegurar la calidad de los datos:
+---
 
-- Eliminación de duplicados: Se verificó y eliminó cualquier registro repetido.
-- Manejo de valores nulos: Se eliminaron filas incompletas para evitar sesgos en los cálculos.
+## 🧹 Limpieza de Datos
 
-Conversión de tipos:
-- La columna fecha se convirtió al formato datetime.
+**Pasos realizados:**
+- Eliminación de duplicados
+- Manejo de valores nulos (eliminación de filas incompletas)
+- Conversión de la columna `fecha` a formato `datetime`
 
+---
 
-4. Análisis Descriptivo:
+## 📊 Análisis Descriptivo
 
-Se calcularon estadísticas clave para entender el contexto:
-- Temperatura Promedio por Ciudad: Se identificó qué ciudades son más cálidas.
-- Precipitación Total: Suma de lluvias para ver qué ciudad es más húmeda.
-- Correlación: Se generó una matriz para ver cómo interactúan variables como temperatura y humedad.
+- **Temperatura Promedio por Ciudad:** Identificación de ciudades más cálidas.
+- **Precipitación Total:** Ciudad más húmeda por suma anual/mensual.
+- **Correlación entre variables:** Matriz para observar interacción entre temperatura, humedad, precipitación.
 
+---
 
-5. Visualización:
+## 📈 Visualizaciones
 
-Se generaron 3 gráficos para comunicar los hallazgos:
-- Distribución de Temperatura (Boxplot): Para comparar los rangos y medianas de temperatura entre ciudades.
-- Relación Temperatura vs Humedad (Scatterplot): Para visualizar si el calor está relacionado con ambientes más secos o húmedos.
-- Tendencia Temporal (Lineplot): Para observar la evolución del clima a lo largo de las fechas registradas.
+1. **Distribución de Temperaturas**  
+   _Boxplot para comparar rangos y medianas entre ciudades_
 
+   ![Ejemplo Boxplot](ruta/boxplot.png)
 
-6. Interpretación y Conclusiones:
+2. **Relación Temperatura vs Humedad**  
+   _Scatterplot para visualizar si el calor está relacionado con ambientes más secos o húmedos_
 
-Hallazgos Principales:
-- Diferencias Regionales: Existen variaciones significativas entre ciudades, algunas mantienen rangos de temperatura muy estables mientras que otras fluctúan más.
-- Relación Inversa: Se observó una tendencia donde los días con mayor temperatura suelen tener menor humedad.
-- Estacionalidad: Los patrones de temperatura siguen ciclos claros que afectan a todas las ciudades al mismo tiempo.
+   ![Ejemplo Scatterplot](ruta/scatterplot.png)
 
-Pasos futuros:
-- Análisis de un a mayor escala temporal y predicción: Se podrían recolectar datos históricos más antiguos para tener un modelo más robusto con el que poder hacer estadística inferencial para predicciones futuras del clima.
-- Mayor cantidad de parámetros: Se podrían incluir datos de consumo eléctrico o enfermedades respiratorias/golpes de calor para evaluar el impacto del clima en la infraestructura y salud pública.
+3. **Tendencia Temporal**  
+   _Lineplot para observar la evolución del clima por ciudad_
 
+   ![Ejemplo Lineplot](ruta/lineplot.png)
 
+---
 
-Proyecto realizado por Mizraim Moroyoqui Cárdenas - Diciembre 2025
+## 💡 Interpretación y Conclusiones
+
+**Hallazgos principales:**
+- 🌎 **Diferencias Regionales:** Variaciones significativas entre ciudades; algunas con rangos estables, otras con alta fluctuación.
+- 🔄 **Relación Inversa:** Los días más cálidos suelen tener menor humedad.
+- 📅 **Estacionalidad:** Ciclos claros de temperatura afectan a todas las ciudades.
+
+**Pasos futuros:**
+- Análisis temporal extendido y predicciones con modelos robustos
+- Incorporación de más variables (consumo eléctrico, datos de salud pública)
+
+---
+
+> Proyecto realizado por **Mizraim Moroyoqui Cárdenas**  
+> _Diciembre 2025_
